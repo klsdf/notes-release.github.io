@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ch">
+
+<head>
+  <meta charset="UTF-8">
+  <meta>
+  <title>闫的笔记大全</title>
+</head>
+<style>
+
+  body{
+   background-image: url("墙纸.jpg");
+  }
+  #title {
+    margin-top: 35px;
+    font-size: 50px;
+    text-align: center;
+    font-family:"楷体","楷体_GB2312";
+    text-shadow: 6px 6px 10px black;
+    font-weight: bold;
+  }
+
+  .content {
+    /* 浮动和布局相关 */
+    float: left;
+    margin: 60px 20px;
+    width: 260px;
+    height: 415px;
+    position: relative;
+    box-shadow: 15px 15px 20px 4px black;
+    border-radius: 30px;
+    overflow: hidden;
+
+    background-color: silver;
+
+  }
+  .content img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+  }
+  .content .tag{
+    position: absolute;
+
+    margin: 0;
+
+    font-size: 30px;
+    font-family:"楷体","楷体_GB2312";
+    font-weight: bold;
+    color:lightgoldenrodyellow;
+
+    /* 位置居中 */
+    left: 50%;
+    transform: translate(-50%,-50%);
+    top: 50%;
+
+  }
+
+  .content:hover{
+    cursor: pointer;
+  }
+
+  .content:hover .tag{
+    color: brown;
+    
+  }
+</style>
+
+<body>
+  <div id="title">学而不思则罔，思而不学则殆</div>
+
+  <a href="./webDev.html" class="content">
+    <img src="./前端.png" alt="web开发">
+    <p class="tag">web开发</p>
+  </a>
+
+  <div class="content">
+    <img src="./戴珍珠耳环的少女.jpg" alt="戴珍珠耳环的少女">
+    <p class="tag">艺术</p>
+  </div>
+
+  <a href="./music.html" class="content">
+    <img src="./拉赫玛尼诺夫.jpg" alt="拉赫玛尼诺夫">
+    <p class="tag">音乐</p>
+  </a>
+
+  <div class="content">
+    <img src="./塞尔达.jpg" alt="web开发">
+    <p class="tag">游戏开发</p>
+  </div>
+
+  <a href="./index_0.html" class="content">
+    <!-- <img src="" alt="还在想"> -->
+    <p class="tag">旧版</p>
+  </a>
+
+</body>
+
+<script>
+  var urls = []
+  var contents = document.getElementsByClassName("content");
+  console.log(contents)
+
+  for (let i = 0; i < contents.length; i++)
+    contents[i].onclick = function () {
+      console.log("ok")
+  }
+
+</script>
+
+</html>
